@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Fitness Hub - Get Fit</title>
+    <style>
+        /* --- CORE STYLES: Simple & Clean --- */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light background */
+            color: #333;
+        }
+
+        /* Dark Header/Navigation */
+        header {
+            background: #2c3e50; /* Dark Blue/Gray */
+            color: white;
+            padding: 15px 5%;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Main Content Container */
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white; /* White block inside gray background */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff; /* Simple accent blue */
+            margin-bottom: 25px;
+        }
+
+        /* Basic Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+
+        /* Trainer Grid - Simple Flexbox */
+        .trainer-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            text-align: center;
+        }
+        .trainer-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            flex: 1;
+        }
+
+        /* Call-to-Action Button */
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="font-size: 1.8rem;">💪 FITNESS HUB</h1>
+        <nav style="margin-top: 10px;">
+            <a href="#classes">Classes</a>
+            <a href="#trainers">Trainers</a>
+            <a href="#membership">Membership</a>
+            <a href="#blog">Blog</a>
+        </nav>
+    </header>
+
+    <section id="classes" class="container">
+        <h2>📅 Group Class Schedule</h2>
+        <p style="text-align: center;">Find the perfect workout time for you.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Thursday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>6:30 AM</td>
+                    <td>Power Cycle</td>
+                    <td>—</td>
+                    <td>HIIT</td>
+                </tr>
+                <tr>
+                    <td>5:30 PM</td>
+                    <td>Yoga Flow</td>
+                    <td>Body Pump</td>
+                    <td>Zumba</td>
+                </tr>
+                <tr>
+                    <td>7:00 PM</td>
+                    <td>HIIT</td>
+                    <td>Yoga Flow</td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center; font-style: italic;">*All classes are 45 minutes long.</p>
+    </section>
+
+    <section id="trainers" class="container">
+        <h2>🧑‍🏫 Meet Our Expert Trainers</h2>
+        <p style="text-align: center;">Book a personalized session with one of our certified professionals.</p>
+
+        <div class="trainer-grid">
+            
+            <div class="trainer-card">
+                <img src="https://lh3.googleusercontent.com/oZxIWAtARS4-A1bY6CLTOWHEuJgrPSjLfF_k1vNsC64a16G2UqF_kHQaaOD8HLI06z-ilWp3-9rGZl6C1z47NPoTW6E=s320-rw">
+                <h3>Ramdev</h3>
+                <p>Specialty: **Yoga & Mobility**</p>
+                <p style="font-size: 0.9em;">Focuses on injury prevention and core strength.</p>
+                <a href="#" class="btn" style="background-color: #1abc9c;">Book Ramdev</a>
+            </div>
+            
+            <div class="trainer-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXgWpsZXnDjcBlR2RlYwvqMHh9FGljxwAodg&s">
+                <h3>Raja</h3>
+                <p>Specialty: **Weight Loss & Strength**</p>
+                <p style="font-size: 0.9em;">NASM Certified. Loves functional training.</p>
+                <a href="#" class="btn">Book Raja</a>
+            </div>
+
+            <div class="trainer-card">
+                <img src="https://images.yourstory.com/cs/2/a09f22505c6411ea9c48a10bad99c62f/Image2u5a-1730203112367.jpg?mode=crop&crop=faces&ar=2%3A1&format=auto&w=375&q=40">
+                <h3>Arvind</h3>
+                <p>Specialty: **Cardio & Dance**</p>
+                <p style="font-size: 0.9em;">Energy expert! Perfect for high-intensity motivation.</p>
+                <a href="#" class="btn" style="background-color: #1abc9c;">Book Arvind</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="membership" class="container" style="text-align: center;">
+        <h2>💰 Membership Plans</h2>
+        <p>Choose the plan that fits your goals and budget.</p>
+        
+        <div style="border: 2px dashed #007bff; padding: 20px; margin-bottom: 20px;">
+            <h3>Basic Plan: $49/Month</h3>
+            <p>24/7 Access, Gym Floor Only.</p>
+        </div>
+        
+        <div style="border: 2px solid #1abc9c; padding: 20px;">
+            <h3>Premium Plan: $79/Month (Best Value)</h3>
+            <p>24/7 Access, ALL Classes Included, 1 Free PT Session.</p>
+        </div>
+
+        <a href="#" class="btn">View All Plans & Sign Up</a>
+    </section>
+    
+    <section id="blog" class="container">
+        <h2>💡 Fitness Tips Blog</h2>
+        <p style="text-align: center;">Stay informed with our latest articles on health and wellness.</p>
+        
+        <ul style="list-style-type: none; padding: 0; width: 80%; margin: 0 auto;">
+            <li style="border-bottom: 1px solid #eee; padding: 10px 0;">» How to Choose the Right Workout Shoes (Read More)</li>
+            <li style="border-bottom: 1px solid #eee; padding: 10px 0;">» Simple Meal Prep Ideas for Busy Weeks (Read More)</li>
+            <li style="padding: 10px 0;">» Why Rest Days Are Just As Important As Workouts (Read More)</li>
+        </ul>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Fitness Club Name. | Location | Contact Us</p>
+    </footer>
+
+</body>
+</html>

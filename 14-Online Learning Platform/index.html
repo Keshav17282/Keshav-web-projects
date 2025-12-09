@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillUp Academy - Learn Today</title>
+    <style>
+        /* --- CORE CSS STYLES --- */
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9; /* Soft, professional background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #1a5276; /* Professional Deep Blue */
+            color: white;
+            padding: 20px 5%;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav a {
+            color: #9cd8ff; /* Light blue accent */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 5px 0;
+        }
+
+        /* Main Content Container */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1a5276;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        /* --- 1. Course Listings Grid --- */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .course-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+        .course-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 150px;
+            background-color: #d1e5f0; /* Placeholder color */
+            text-align: center;
+            line-height: 150px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .course-info {
+            padding: 15px;
+        }
+        .course-info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.3em;
+        }
+        .course-info .price {
+            font-size: 1.2em;
+            color: #27ae60; /* Green accent for price */
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .enroll-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db; /* Enrollment Blue */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* --- 2. Enrollment Form (Checkout) --- */
+        .enrollment-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #fcfcfc;
+            border-radius: 8px;
+        }
+        .enrollment-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .enrollment-form input[type="text"], 
+        .enrollment-form input[type="email"], 
+        .enrollment-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .enrollment-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        /* --- 3. Testimonials Section --- */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .testimonial-card {
+            padding: 20px;
+            background-color: #ecf0f1; /* Light gray box */
+            border-left: 5px solid #3498db;
+            border-radius: 4px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .author {
+            font-weight: bold;
+            color: #1a5276;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SkillUp Academy</h1>
+        <p>Unlock Your Next Skill. Learn On Your Schedule.</p>
+        <nav>
+            <a href="#courses">Courses</a>
+            <a href="#enroll">Enroll</a>
+            <a href="#testimonials">Testimonials</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section id="courses">
+            <h2>📚 Browse Our Top Courses</h2>
+            
+            <div class="course-grid">
+                
+                <div class="course-card">
+                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg"length="300" height="150">
+                    <div class="course-info">
+                        <h3>Full-Stack Web Development</h3>
+                        <p>Master HTML, CSS, JavaScript, and Node.js.</p>
+                        <p class="price">$199.99</p>
+                        <a href="#enroll" class="enroll-btn">Enroll Now</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="https://certiprof.com/cdn/shop/articles/DIGITAL_MARKETING_BY_CERTIPROF.webp?v=1742398487" length="300" height="150">
+                    <div class="course-info">
+                        <h3>Complete Digital Marketing</h3>
+                        <p>SEO, Social Media Strategy, and PPC advertising.</p>
+                        <p class="price">$149.99</p>
+                        <a href="#enroll" class="enroll-btn">Enroll Now</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnTQUZW9jgn2WqL9hNJarlbngHpJPoAK3tKA&s" length="300" height="150">
+                    <div class="course-info">
+                        <h3>Intro to Python Data Science</h3>
+                        <p>Analyze data using Python, Pandas, and Matplotlib.</p>
+                        <p class="price">$249.99</p>
+                        <a href="#enroll" class="enroll-btn">Enroll Now</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
+
+        <section id="enroll">
+            <h2>🛒 Secure Enrollment</h2>
+            <p style="text-align: center;">Complete your details to access your chosen course(s).</p>
+            
+            <form class="enrollment-form">
+                <label for="course-select">Course to Enroll In:</label>
+                <select id="course-select" name="course" required>
+                    <option>Select a Course</option>
+                    <option>Full-Stack Web Development</option>
+                    <option>Complete Digital Marketing</option>
+                    <option>Intro to Python Data Science</option>
+                </select>
+
+                <label for="name">Your Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email (Login ID):</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="payment">Payment Method (Simulated):</label>
+                <input type="text" id="payment" name="payment" placeholder="Card Number or PayPal (Simulated)">
+
+                <button type="submit">Finalize Enrollment (Simulated Payment)</button>
+            </form>
+        </section>
+
+        <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
+
+        <section id="testimonials">
+            <h2>⭐ What Our Students Say</h2>
+            
+            <div class="testimonial-grid">
+                
+                <div class="testimonial-card">
+                    <p class="quote">"The Python course changed my career path. The instructors were excellent and the support was fast!"</p>
+                    <p class="author">— Sarah K., Data Analyst</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"I finished the Web Development course in 3 months and landed my first freelance client right after. Highly recommend SkillUp!"</p>
+                    <p class="author">— Michael T., Freelancer</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"Affordable, engaging, and I could fit it around my full-time job. Five stars for the Digital Marketing program."</p>
+                    <p class="author">— Jessica R., Business Owner</p>
+                </div>
+                
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SkillUp Academy. | Privacy Policy | Help Center</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Riff Raiders - Official Website</title>
+    <style>
+        /* --- CORE CSS STYLES (Kept Minimal) --- */
+        body {
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark, rock-and-roll background */
+            color: #f4f4f4; /* Light text */
+            line-height: 1.6;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #333;
+            padding: 20px 5%;
+            text-align: center;
+            border-bottom: 3px solid #e74c3c; 
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #e74c3c;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 10px 0;
+        }
+
+        /* Main Content Container */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1abc9c;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        /* Music Player Section */
+        .music-player {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+        }
+        .music-player audio {
+            width: 80%;
+            max-width: 500px;
+            margin-top: 15px;
+        }
+
+        /* Tour Dates Table (Simplified) */
+        .tour-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .tour-table th, .tour-table td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: left;
+        }
+        .tour-table th {
+            background-color: #333;
+            color: #1abc9c;
+        }
+        .ticket-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        /* Merchandise Grid (Simplified) */
+        .merch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .merch-item {
+            border: 1px solid #333;
+            padding: 15px;
+            background-color: #2a2a2a;
+        }
+        .merch-item .price {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        /* Style for the image/video containers */
+        .media-placeholder {
+            width: 100%;
+            height: 200px; 
+            background-color: #333;
+            text-align: center;
+            line-height: 200px;
+            margin-bottom: 10px;
+            overflow: hidden; /* Important for iframes */
+        }
+        .media-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .media-placeholder iframe {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>THE RIFF RAIDERS</h1>
+        <nav>
+            <a href="#music">Music</a>
+            <a href="#tour">Tour Dates</a>
+            <a href="#merch">Merchandise</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section id="music">
+            <h2>🎧 Listen Now: Latest Single</h2>
+            <div class="music-player">
+                <p>Track: "Highway to the Cosmos"</p>
+                <audio controls>
+                    <source src="PASTE_YOUR_MP3_LINK_HERE.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </section>
+
+        <section id="tour">
+            <h2>🔥 Upcoming Tour Dates</h2>
+            
+            <table class="tour-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>City</th>
+                        <th>Venue</th>
+                        <th>Tickets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Feb 14, 2026</td>
+                        <td>New York, NY</td>
+                        <td>The Electric Ballroom</td>
+                        <td><a href="PASTE_YOUR_TICKET_LINK_HERE" class="ticket-btn">Get Tickets</a></td>
+                    </tr>
+                    <tr>
+                        <td>Feb 20, 2026</td>
+                        <td>Chicago, IL</td>
+                        <td>The Metroplex</td>
+                        <td><a href="PASTE_YOUR_TICKET_LINK_HERE" class="ticket-btn">Get Tickets</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="merch">
+            <h2>👕 Official Merchandise Store</h2>
+            
+            <div class="merch-grid">
+                
+                <div class="merch-item">
+                    <div class="media-placeholder">
+                        <img src="https://soulandpeace.com/cdn/shop/files/magicaltreeblack_024581a9-7ecf-4a87-95c6-6deeda8a6e25.jpg?v=1692522667" alt="Cosmos Tee">
+                    </div>
+                    
+                    <h3>Cosmos Tee</h3>
+                    <p class="price">$25.00</p>
+                    <a href="PASTE_YOUR_STORE_LINK_HERE" class="ticket-btn">Buy Now</a>
+                </div>
+
+                <div class="merch-item">
+                    <div class="media-placeholder">
+                        <img src="https://printingstudio.in/cdn/shop/files/Tshirtmockup2.jpg?v=1710325176&width=1946" alt="Vinyl Album">
+                    </div>
+                    <h3>Vinyl Album: "Raid"</h3>
+                    <p class="price">$35.00</p>
+                    <a href="PASTE_YOUR_STORE_LINK_HERE" class="ticket-btn">Buy Now</a>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="gallery">
+            <h2>📸 Photo & Video Gallery</h2>
+            
+            <div class="gallery-grid">
+                
+                <div class="media-placeholder">
+                    <img src="https://images.unsplash.com/photo-1527259693341-cbc6f91e4d6e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxpdmUlMjBjb25jZXJ0fGVufDB8fDB8fHww" alt="Live Concert Photo">
+                </div>
+
+                <div class="media-placeholder" style="line-height: 1;">
+                    <iframe width="100%" height="200" 
+                        src="https://youtu.be/LV_wiOhO40Q?si=L6jwGwG9QvWWW2_q" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <div class="media-placeholder">
+                    <img src="https://media.istockphoto.com/id/821953178/photo/preparation-for-a-concert.jpg?s=612x612&w=0&k=20&c=U_wy5XQkatvxGm2KkeWfDOEHLG_OVrLpR6zXATy5y-w=" alt="Backstage Photo">
+                </div>
+
+                <div class="media-placeholder" style="line-height: 1;">
+                    <iframe width="100%" height="200" 
+                        src="https://youtu.be/AbkEmIgJMcU?si=IO7BSvlg_Ht2ZvA8
+                        " 
+                        title="YouTube video player 2" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Follow us on Social Media! | Contact: info@riffradars.com</p>
+    </footer>
+
+</body>
+</html>

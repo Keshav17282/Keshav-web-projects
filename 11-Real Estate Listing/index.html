@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Realty - Find Your Dream Home</title>
+    <style>
+        /* --- MINIMAL CORE CSS STYLES --- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6; /* Light background */
+            color: #333;
+        }
+
+        /* Header and Navigation (Dark and Simple) */
+        header {
+            background-color: #2c3e55; /* Deep Navy Blue */
+            color: white;
+            padding: 20px 5%;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Main Content Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e55;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        /* --- Search Filters Layout (Simple Flex) --- */
+        .search-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 15px;
+            background-color: #ecf0f1; /* Light gray background */
+            margin-bottom: 30px;
+        }
+        .search-filters select, .search-filters input, .search-filters button {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-filters button {
+            background-color: #1abc9c; /* Accent color */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* --- Property Listings Grid (Simple Grid) --- */
+        .listing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .property-card {
+            border: 1px solid #ddd;
+            overflow: hidden;
+            background-color: white;
+        }
+        .property-image {
+            width: 100%;
+            height: 180px;
+            background-color: #bdc3c7; /* Placeholder color */
+            text-align: center;
+            line-height: 180px;
+            font-size: 1.1em;
+        }
+
+        .property-info {
+            padding: 15px;
+        }
+        .price {
+            font-size: 1.4em;
+            color: #e74c3c; /* Red accent for price */
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        /* --- Inquiry Form Styling --- */
+        .inquiry-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .inquiry-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .inquiry-form input, .inquiry-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .inquiry-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2c3e55;
+            color: white;
+            border: none;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ELITE REALTY</h1>
+        <p>Your Key to the City</p>
+        <nav>
+            <a href="#listings">Properties</a>
+            <a href="#search">Search</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section id="search">
+            <h2>🔎 Find Your Next Home</h2>
+            <div class="search-filters">
+                <div>
+                    <label for="location">Location</label>
+                    <select id="location">
+                        <option>Any Location</option>
+                        <option>Downtown</option>
+                        <option>Suburban Acres</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="type">Property Type</label>
+                    <select id="type">
+                        <option>Any Type</option>
+                        <option>House</option>
+                        <option>Apartment</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="max-price">Max Price ($)</label>
+                    <input type="number" id="max-price" placeholder="500,000">
+                </div>
+                <button>Search Listings</button>
+            </div>
+        </section>
+
+        <section id="listings">
+            <h2>🏠 Available Properties</h2>
+            
+            <div class="listing-grid">
+                
+                <div class="property-card">
+                    <img src="https://philkeandesigns.com/wp-content/uploads/2025/08/425A2046.jpg" len gth="300px" height="250px">
+                    <div class="property-info">
+                        <h3>Modern Townhouse, Downtown</h3>
+                        <p class="price">$350,000</p>
+                        <div class="details">
+                            <span>🛏️ 3 Beds</span>
+                            <span>🛁 2 Baths</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5b53605cb98a78268301276f/1574038322960-IW8XBXSPXAXZ0IK6JJIM/DSC_2132+lighten.jpg" length="300px" height="250px">
+                    <div class="property-info">
+                        <h3>Luxury Coastal Condo</h3>
+                        <p class="price">$525,000</p>
+                        <div class="details">
+                            <span>🛏️ 2 Beds</span>
+                            <span>🛁 2.5 Baths</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <img src="https://thumbs.dreamstime.com/b/cozy-brick-house-twilight-garden-generated-ai-path-lit-landscape-lighting-warm-light-glows-windows-creating-377935273.jpg" length="40x" height="250px">
+                    <div class="property-info">
+                        <h3>Cozy Suburban Cottage</h3>
+                        <p class="price">$215,000</p>
+                        <div class="details">
+                            <span>🛏️ 4 Beds</span>
+                            <span>🛁 3 Baths</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+        <section id="contact">
+            <h2>✉️ Inquiry Form for Buyers</h2>
+            <p style="text-align: center;">Have questions or want to schedule a viewing? Contact us!</p>
+            
+            <form class="inquiry-form">
+                <label for="name">Your Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="property">Interested Property:</label>
+                <input type="text" id="property" name="property">
+
+                <label for="message">Your Message / Questions:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Elite Realty. | Contact: (555) 555-HOME</p>
+    </footer>
+
+</body>
+</html>

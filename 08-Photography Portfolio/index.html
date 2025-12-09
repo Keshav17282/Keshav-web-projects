@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keshav Garg Photography</title>
+    <!-- We use Tailwind for simple, clean design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Simple Font and Modal Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        /* Smooth scrolling for internal links */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-gray-800 tracking-wide cursor-pointer">
+                K.G. Photography
+            </h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#portfolio" class="text-gray-600 hover:text-gray-900 font-medium transition duration-150">Portfolio</a>
+                <a href="#categories" class="text-gray-600 hover:text-gray-900 font-medium transition duration-150">Categories</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-gray-900 font-medium transition duration-150">Testimonials</a>
+                <a href="#booking" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-1 rounded-full font-semibold transition duration-150 shadow-md">Book Session</a>
+            </nav>
+            <button id="menu-button" onclick="showView('menu')" class="md:hidden p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-8">
+
+        <!-- HERO SECTION -->
+        <section class="text-center py-16 sm:py-24 bg-gray-100 rounded-xl shadow-lg mb-16">
+            <p class="text-lg font-semibold text-gray-600 mb-2">Capturing Moments, Telling Stories</p>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
+                Photography Portfolio by Keshav Garg
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Specializing in capturing the raw beauty of people and places through a unique visual lens.
+            </p>
+            <a href="#portfolio" class="bg-gray-800 hover:bg-gray-700 text-white text-lg font-semibold py-3 px-8 rounded-full transition duration-300 shadow-xl transform hover:scale-105 inline-block">
+                View Latest Work
+            </a>
+        </section>
+
+        <!-- PORTFOLIO GALLERY SECTION -->
+        <section id="portfolio" class="py-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b pb-2 text-center">Featured Work</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+                
+                <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                    <img src="https://placehold.co/400x300/60A5FA/ffffff?text=Portrait" alt="Portrait Photography" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-white text-center"><p class="font-medium text-gray-700">Studio Portrait</p></div>
+                </div>
+                
+                <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                    <img src="https://placehold.co/400x300/10B981/ffffff?text=Landscape" alt="Landscape Photography" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-white text-center"><p class="font-medium text-gray-700">Mountain Landscape</p></div>
+                </div>
+                
+                <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                    <img src="https://placehold.co/400x300/F97316/ffffff?text=Event" alt="Event Photography" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-white text-center"><p class="font-medium text-gray-700">Wedding Detail</p></div>
+                </div>
+                
+                <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                    <img src="https://placehold.co/400x300/3B82F6/ffffff?text=Street" alt="Street Photography" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-white text-center"><p class="font-medium text-gray-700">Urban Exploration</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES SECTION -->
+        <section id="categories" class="py-12 mt-12 bg-white rounded-xl shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b pb-2 text-center">Photography Categories</h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                
+                <div class="p-6 text-center rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
+                    <h3 class="font-bold text-xl text-gray-800 mb-2">Portraits</h3>
+                    <p class="text-gray-600 text-sm">Individual, family, and professional headshots.</p>
+                </div>
+
+                <div class="p-6 text-center rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
+                    <h3 class="font-bold text-xl text-gray-800 mb-2">Events</h3>
+                    <p class="text-gray-600 text-sm">Weddings, corporate functions, and live performances.</p>
+                </div>
+
+                <div class="p-6 text-center rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
+                    <h3 class="font-bold text-xl text-gray-800 mb-2">Commercial</h3>
+                    <p class="text-gray-600 text-sm">Product, real estate, and brand lifestyle shoots.</p>
+                </div>
+
+                <div class="p-6 text-center rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
+                    <h3 class="font-bold text-xl text-gray-800 mb-2">Fine Art</h3>
+                    <p class="text-gray-600 text-sm">Conceptual and abstract creative prints.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENT TESTIMONIALS SECTION -->
+        <section id="testimonials" class="py-12 mt-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b pb-2 text-center">What Clients Say</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-l-4 border-yellow-500">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img src="https://images.tv9hindi.com/wp-content/uploads/2025/03/babita-ji-pic-2.jpg" alt="Client 1 Photo" class="w-16 h-16 rounded-full object-cover shadow-md">
+                        <div>
+                            <p class="font-bold text-gray-800">Babita</p>
+                            <p class="text-sm text-yellow-600">Portrait Session</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic border-t pt-4">"Keshav's professionalism was unmatched. He captured exactly the mood I wanted for my new headshots. Highly recommended!"</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-xl border-l-4 border-yellow-500">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCD4VMe-ZHoMNhfocIyJfI_3EMUhpW-XDGHA&s" alt="Client 2 Photo" class="w-16 h-16 rounded-full object-cover shadow-md">
+                        <div>
+                            <p class="font-bold text-gray-800">Jethalal</p>
+                            <p class="text-sm text-yellow-600">Event</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic border-t pt-4">"The photos from our family event are stunning. Keshav was discreet and captured genuine moments we will cherish forever."</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- BOOKING / CONTACT SECTION -->
+        <section class="py-12 mt-12">
+            <div class="max-w-3xl mx-auto">
+                <!-- Booking Inquiry Form -->
+                <div id="booking" class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-gray-800">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Book Your Session</h2>
+                    <p class="text-gray-600 mb-6">
+                        Ready to capture your next moment? Fill out this form to inquire about availability and pricing.
+                    </p>
+                    <form onsubmit="alert('Booking inquiry received! I will contact you within 24 hours to discuss details.'); return false;" class="space-y-4">
+                        <input type="text" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-gray-800 focus:border-gray-800">
+                        <input type="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-gray-800 focus:border-gray-800">
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-gray-800 focus:border-gray-800">
+                            <option value="">Type of Shoot...</option>
+                            <option>Portrait Session</option>
+                            <option>Wedding / Event</option>
+                            <option>Commercial / Product</option>
+                            <option>Other</option>
+                        </select>
+                        <textarea placeholder="Tell me your preferred date and any special requests." rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-gray-800 focus:border-gray-800"></textarea>
+                        <button type="submit" class="w-full bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 rounded-lg transition duration-150 shadow-md">
+                            Send Booking Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-white mt-12 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Keshav Garg Photography | Portfolio Design</p>
+        </div>
+    </footer>
+
+
+    <!-- MOBILE MENU MODAL -->
+    <div id="menu-modal" class="modal fixed inset-0 bg-gray-900 bg-opacity-75 z-40 flex justify-end opacity-0 pointer-events-none" onclick="if(event.target.id === 'menu-modal') showView('home')">
+        <div class="bg-white w-64 h-full modal-content transform translate-x-full transition-all duration-300">
+            <div class="p-6 border-b flex justify-between items-center">
+                <h3 class="text-xl font-bold text-gray-800">Menu</h3>
+                <button onclick="showView('home')" class="text-gray-500 hover:text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <nav class="flex flex-col p-4 space-y-2">
+                <a href="#portfolio" onclick="showView('home')" class="py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-100 font-medium transition duration-150">Portfolio</a>
+                <a href="#categories" onclick="showView('home')" class="py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-100 font-medium transition duration-150">Categories</a>
+                <a href="#testimonials" onclick="showView('home')" class="py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-100 font-medium transition duration-150">Testimonials</a>
+                <a href="#booking" onclick="showView('home')" class="py-2 px-3 rounded-lg bg-gray-100 text-gray-800 font-semibold transition duration-150">Book Session</a>
+            </nav>
+        </div>
+    </div>
+
+
+    <script>
+        function updateUI() {
+            // Placeholder: Not needed for this site.
+        }
+        
+        function showView(view) {
+            var menuModal = document.getElementById('menu-modal');
+
+            // Hide menu logic
+            menuModal.classList.remove('is-active');
+            menuModal.classList.add('opacity-0', 'pointer-events-none');
+            document.querySelector('#menu-modal > div').classList.add('translate-x-full');
+
+            // Show menu logic
+            if (view === 'menu') {
+                menuModal.classList.add('is-active');
+                menuModal.classList.remove('opacity-0', 'pointer-events-none');
+                document.querySelector('#menu-modal > div').classList.remove('translate-x-full');
+            }
+            
+            // Scroll logic after clicking a menu item
+            if (event && event.target && event.target.tagName === 'A') {
+                var targetId = event.target.getAttribute('href');
+                if (targetId) {
+                    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            updateUI(); 
+        });
+
+    </script>
+</body>
+</html>

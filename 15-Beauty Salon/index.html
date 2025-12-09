@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquility Spa & Salon - Your Sanctuary</title>
+    <style>
+        /* --- MINIMAL CORE CSS STYLES --- */
+        body {
+            font-family: Georgia, serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #fcfcfc; /* Very light background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #f7e6e8; /* Soft Pink/Beige */
+            color: #4b0082; /* Deep Indigo/Purple */
+            padding: 20px 5%;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav a {
+            color: #4b0082;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* Main Content Container */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            text-align: center;
+            color: #8b4513; /* Earthy brown */
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        /* --- 1. Services & Booking Layout (Using Flexbox for side-by-side) --- */
+        .services-booking-layout {
+            display: flex;
+            flex-wrap: wrap; /* Allows sections to stack on small screens */
+            gap: 40px;
+            padding: 20px 0;
+        }
+        .services-list {
+            flex: 2; /* Takes more space */
+        }
+        .booking-form-area {
+            flex: 1; /* Takes less space */
+            background-color: #fff0f5; 
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Service Cards */
+        .service-card {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            margin-bottom: 15px;
+        }
+        .service-card .service-img-container {
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+            background-color: #e6e6fa; 
+            border-radius: 50%; /* Circle shape */
+            overflow: hidden;
+        }
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .service-card h3 {
+            color: #4b0082;
+            margin: 0 0 5px 0;
+        }
+
+        /* Booking Form Styles */
+        .booking-form-area input, .booking-form-area select, .booking-form-area textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .booking-form-area button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4b0082;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* --- 2. Gallery Section --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            border: 1px solid #eee;
+            background-color: #f7e6e8;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+            padding: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4b0082;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tranquility Spa & Salon</h1>
+        <p>Your Sanctuary for Beauty & Relaxation</p>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#booking">Book Online</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="services-booking-layout">
+            
+            <section id="services" class="services-list">
+                <h2>✨ Our Signature Services</h2>
+                
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="PASTE_SERVICE_IMAGE_URL_HERE_1.jpg" alt="Signature Facial">
+                    </div>
+                    <div>
+                        <h3>Signature Glow Facial</h3>
+                        <p>Revitalize your skin with our perfection treatment. | <span class="price">60 min - $120</span></p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="PASTE_SERVICE_IMAGE_URL_HERE_2.jpg" alt="Deep Tissue Massage">
+                    </div>
+                    <div>
+                        <h3>Deep Tissue Massage</h3>
+                        <p>Target tension and soothe sore muscles. | <span class="price">90 min - $150</span></p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-container">
+                         <img src="PASTE_SERVICE_IMAGE_URL_HERE_3.jpg" alt="Luxury Manicure & Pedicure">
+                    </div>
+                    <div>
+                        <h3>Luxury Manicure & Pedicure</h3>
+                        <p>Complete care for your hands and feet. | <span class="price">75 min - $80</span></p>
+                    </div>
+                </div>
+
+            </section>
+            
+            <section id="booking" class="booking-form-area">
+                <h2>➡️ Online Booking</h2>
+                <p style="font-size: 0.9em;">Request your appointment. We'll confirm within 24 hours.</p>
+                
+                <form>
+                    <label for="service">Choose a Service:</label>
+                    <select id="service" required>
+                        <option>Signature Glow Facial</option>
+                        <option>Deep Tissue Massage</option>
+                        <option>Luxury Manicure & Pedicure</option>
+                    </select>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+                    
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" required>
+
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="notes">Notes/Requests:</label>
+                    <textarea id="notes" rows="2"></textarea>
+
+                    <button type="submit">Request Booking</button>
+                </form>
+            </section>
+
+        </div>
+
+        <section id="gallery">
+            <h2>📸 Before & After Gallery</h2>
+            <p style="text-align: center; font-style: italic;">See the transformation our clients experience.</p>
+            
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img src="https://c.ndtvimg.com/2025-03/ufsk9568_rohit-sharma-bcci_625x300_03_March_25.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605" alt="Before Treatment 1">
+                    <p class="gallery-caption">Before (Client A)</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://c.ndtvimg.com/2025-11/8kvk4bb8_rohit-sharma_625x300_29_November_25.jpeg?im=FitAndFill,algorithm=dnn,width=1200,height=738
+                    " alt="After Treatment 1">
+                    <p class="gallery-caption">After (Client A)</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7ya27XGMuLYKOekbb75X0EaP1eXkWIOdhwGYbyri5_boVl4SKiMqrIMm9PTwStDaEX_uiHalsuJlDZoZkDkjKD8RykH-d0-nB8HzNKmorupForz5GZXmqQeJeQwy3SjNoqkD27ZuZ3igWuKKzTnUgufoJvXj2VIqkPYt9cwKEwipUoCcSGltizzHBNKAV/s1082/o.jpeg" alt="Before Treatment 2">
+                    <p class="gallery-caption">Before (Client B)</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHBPOH5CC0ivAVyzzx7u7TzJ_Koz90EjyH2Q&s" alt="After Treatment 2">
+                    <p class="gallery-caption">After (Client B)</p>
+                </div>
+                
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tranquility Spa & Salon. | Contact: (555) BEAUTY | Address: 100 Serenity Lane</p>
+    </footer>
+
+</body>
+</html>

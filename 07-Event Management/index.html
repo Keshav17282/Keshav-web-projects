@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garg Events & Planning</title>
+    <!-- We use Tailwind for simple, clean design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Simple Font and Modal Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        .modal { transition: opacity 0.3s ease, visibility 0.3s ease; }
+        .modal-content { transition: transform 0.3s ease; }
+        .modal.is-active { opacity: 1; visibility: visible; pointer-events: auto; }
+        .modal.is-active .modal-content { transform: translateY(0); }
+        /* Smooth scrolling for internal links */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-pink-700 tracking-wide cursor-pointer">
+                Garg Events
+            </h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#services" class="text-gray-600 hover:text-pink-600 font-medium transition duration-150">Services</a>
+                <a href="#events" class="text-gray-600 hover:text-pink-600 font-medium transition duration-150">Upcoming</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-pink-600 font-medium transition duration-150">Testimonials</a>
+                <a href="#booking" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-1 rounded-full font-semibold transition duration-150 shadow-md">Plan Your Event</a>
+            </nav>
+            <button id="menu-button" onclick="showView('menu')" class="md:hidden p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-8">
+
+        <!-- HERO SECTION -->
+        <section class="text-center py-16 sm:py-24 bg-pink-50 rounded-xl shadow-lg mb-16">
+            <p class="text-lg font-semibold text-pink-600 mb-2">Creative. Organized. Unforgettable.</p>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
+                Event Planning Made Seamlessly Easy
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                From corporate conferences to intimate weddings, Garg Events handles every detail so you can focus on the moment.
+            </p>
+            <a href="#booking" class="bg-pink-600 hover:bg-pink-700 text-white text-lg font-semibold py-3 px-8 rounded-full transition duration-300 shadow-xl transform hover:scale-105 inline-block">
+                Start Planning Today
+            </a>
+        </section>
+
+        <!-- EVENT SERVICES SECTION -->
+        <section id="services" class="py-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b pb-2 text-center">Our Event Services</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mt-8">
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg transition duration-300 hover:shadow-2xl border-t-4 border-purple-500">
+                    <h3 class="font-bold text-xl text-gray-800 my-2">Corporate Events</h3>
+                    <p class="text-gray-600 text-sm mb-4">Planning and execution for conferences, product launches, and team-building retreats.</p>
+                    <a href="#booking" class="text-purple-600 hover:text-purple-800 font-semibold text-sm">Inquire &rarr;</a>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg transition duration-300 hover:shadow-2xl border-t-4 border-teal-500">
+                    <h3 class="font-bold text-xl text-gray-800 my-2">Weddings & Social</h3>
+                    <p class="text-gray-600 text-sm mb-4">Full-service planning for weddings, birthdays, and private parties.</p>
+                    <a href="#booking" class="text-teal-600 hover:text-teal-800 font-semibold text-sm">Inquire &rarr;</a>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg transition duration-300 hover:shadow-2xl border-t-4 border-pink-500">
+                    <h3 class="font-bold text-xl text-gray-800 my-2">Logistics & Venue</h3>
+                    <p class="text-gray-600 text-sm mb-4">Venue sourcing, vendor management, and detailed day-of coordination.</p>
+                    <a href="#booking" class="text-pink-600 hover:text-pink-800 font-semibold text-sm">Inquire &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPCOMING EVENT LISTINGS -->
+        <section id="events" class="py-12 mt-12 bg-gray-100 rounded-xl p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b pb-2 text-center">Featured Events</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                
+                <!-- Event Listing 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg flex space-x-4 transition duration-300 hover:shadow-xl">
+                    <div class="flex-shrink-0 text-center p-3 bg-pink-500 text-white rounded-lg">
+                        <p class="text-2xl font-bold leading-none">05</p>
+                        <p class="text-sm">NOV</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl text-gray-800 mb-1">Innovate Tech Summit 2024</h3>
+                        <p class="text-gray-600 text-sm mb-3">A major conference featuring speakers on AI and future software trends.</p>
+                        <p class="text-sm text-gray-500">Venue: Grand Convention Hall</p>
+                    </div>
+                </div>
+                
+                <!-- Event Listing 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg flex space-x-4 transition duration-300 hover:shadow-xl">
+                    <div class="flex-shrink-0 text-center p-3 bg-pink-500 text-white rounded-lg">
+                        <p class="text-2xl font-bold leading-none">15</p>
+                        <p class="text-sm">DEC</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl text-gray-800 mb-1">Winter Gala Fundraiser</h3>
+                        <p class="text-gray-600 text-sm mb-3">An elegant evening supporting local community arts programs.</p>
+                        <p class="text-sm text-gray-500">Venue: The Rose Ballroom</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="py-12 mt-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b pb-2 text-center">What Our Clients Say</h2>
+            
+            <div class="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                
+                <div class="bg-white p-6 rounded-xl shadow-xl border-l-4 border-yellow-500">
+                    <div class="flex items-start space-x-4 mb-4">
+                        
+                        <img src="https://futureoflife.org/wp-content/uploads/2020/08/elon_musk_royal_society.jpg" alt="Client Photo" class="w-16 h-16 rounded-full object-cover shadow-md">
+                        <div>
+                            <p class="font-bold text-gray-800">Raju</p>
+                            <p class="text-sm text-yellow-600">CEO of Kesla</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic border-t pt-4">"Garg Events executed our annual conference flawlessly. The attention to detail and professional communication made the entire process stress-free!"</p>
+                </div>
+                
+                <!-- Testimonial 2: Now includes space for a photo -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-l-4 border-yellow-500">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <!-- <<< --- PASTE CLIENT PHOTO URL HERE (Testimonial 2) --- >>> -->
+                        <img src="https://wittyvows.com/wp-content/uploads/2017/01/Ok-jaanu-Shraddha-Kapoor.jpg" alt="Client Photo" class="w-16 h-16 rounded-full object-cover shadow-md">
+                        <div>
+                            <p class="font-bold text-gray-800">Radha</p>
+                            <p class="text-sm text-yellow-600">Wedding Clients</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic border-t pt-4">"Our wedding was perfect! Every vendor was coordinated, and the decor was stunning. Highly recommend for any special occasion."</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- BOOKING / CONTACT SECTION -->
+        <section class="py-12 mt-12">
+            <div class="max-w-3xl mx-auto">
+                <!-- Booking Inquiry Form -->
+                <div id="booking" class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-pink-500">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Plan Your Event Now</h2>
+                    <p class="text-gray-600 mb-6">
+                        Tell us about your event, and we will contact you to discuss details and a custom quote.
+                    </p>
+                    <form onsubmit="alert('Thank you for your event inquiry! We will contact you within 24 hours to begin planning.'); return false;" class="space-y-4">
+                        <input type="text" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                        <input type="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                            <option value="">Type of Event...</option>
+                            <option>Wedding</option>
+                            <option>Corporate Conference</option>
+                            <option>Birthday / Social Party</option>
+                            <option>Custom / Other</option>
+                        </select>
+                        <textarea placeholder="Tell us your event date, estimated guest count, and requirements." rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"></textarea>
+                        <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 rounded-lg transition duration-150 shadow-md">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-white mt-12 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Garg Events & Planning | Designed by Keshav Garg</p>
+            <p class="text-sm text-gray-400 mt-2">This is a simulated event planning website.</p>
+        </div>
+    </footer>
+
+
+    <!-- MOBILE MENU MODAL -->
+    <div id="menu-modal" class="modal fixed inset-0 bg-gray-900 bg-opacity-75 z-40 flex justify-end opacity-0 pointer-events-none" onclick="if(event.target.id === 'menu-modal') showView('home')">
+        <div class="bg-white w-64 h-full modal-content transform translate-x-full transition-all duration-300">
+            <div class="p-6 border-b flex justify-between items-center">
+                <h3 class="text-xl font-bold text-gray-800">Menu</h3>
+                <button onclick="showView('home')" class="text-gray-500 hover:text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <nav class="flex flex-col p-4 space-y-2">
+                <a href="#services" onclick="showView('home')" class="py-2 px-3 rounded-lg text-gray-700 hover:bg-pink-50 hover:text-pink-700 font-medium transition duration-150">Services</a>
+                <a href="#events" onclick="showView('home')" class="py-2 px-3 rounded-lg text-gray-700 hover:bg-pink-50 hover:text-pink-700 font-medium transition duration-150">Upcoming</a>
+                <a href="#testimonials" onclick="showView('home')" class="py-2 px-3 rounded-lg text-gray-700 hover:bg-pink-50 hover:text-pink-700 font-medium transition duration-150">Testimonials</a>
+                <a href="#booking" onclick="showView('home')" class="py-2 px-3 rounded-lg bg-pink-50 text-pink-700 font-semibold transition duration-150">Plan Your Event</a>
+            </nav>
+        </div>
+    </div>
+
+
+    <script>
+        function updateUI() {
+            // Placeholder: Not needed for this site.
+        }
+        
+        function showView(view) {
+            var menuModal = document.getElementById('menu-modal');
+
+            // Hide menu logic
+            menuModal.classList.remove('is-active');
+            menuModal.classList.add('opacity-0', 'pointer-events-none');
+            document.querySelector('#menu-modal > div').classList.add('translate-x-full');
+
+            // Show menu logic
+            if (view === 'menu') {
+                menuModal.classList.add('is-active');
+                menuModal.classList.remove('opacity-0', 'pointer-events-none');
+                document.querySelector('#menu-modal > div').classList.remove('translate-x-full');
+            }
+            
+            // Scroll logic after clicking a menu item
+            if (view === 'home' && event.target.tagName === 'A') {
+                var targetId = event.target.getAttribute('href');
+                if (targetId) {
+                    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            updateUI(); 
+        });
+
+    </script>
+</body>
+</html>
